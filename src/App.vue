@@ -1,14 +1,21 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import BaseInput from './components/BaseInput.vue'
+import { ref } from "vue"
+
+const data = ref({
+  value: "empty",
+  code: 54
+})
+
 </script>
 
 <template>
   <div>
-    
+    {{ data }}
   </div>
   <HelloWorld msg="Vite + Vue" />
-  <BaseInput />
+  <BaseInput v-model="data" />
 </template>
 
 <style scoped>
